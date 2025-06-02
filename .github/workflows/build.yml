@@ -27,10 +27,12 @@ jobs:
       - name: Build executable with PyInstaller
         run: |
           pyinstaller main.py --onefile --noconsole
+          echo "Files in dist/:"
+          dir dist
 
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v3
         with:
           name: CuraWoundInstaller
-          path: dist/main.exe
-          name: Upload EXE artifact
+          path: dist/*.exe
+          
