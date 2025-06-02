@@ -1,3 +1,4 @@
+
 name: Build Windows Executable
 
 on:
@@ -29,8 +30,7 @@ jobs:
           pyinstaller main.py --onefile --noconsole
 
       - name: Upload EXE artifact
-        uses: actions/upload-artifact@v3.1.3
+        uses: actions/upload-artifact@v3
         with:
           name: CuraWoundInstaller
           path: dist/*.exe
-          
