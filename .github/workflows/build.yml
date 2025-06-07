@@ -29,7 +29,7 @@ jobs:
           pyinstaller main.py --onefile --noconsole
 
       - name: Upload EXE artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: CuraWoundInstaller
           path: dist/*.exe
